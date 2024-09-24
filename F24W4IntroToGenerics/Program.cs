@@ -11,12 +11,28 @@
             // unboxing
             num = (int)obj;
 
-
             //if (AreEqual(5, 5))
             if (AreEqual<int>(5, 5))
                 Console.WriteLine("Both are equal");
             else
                 Console.WriteLine("Both are not equal");
+
+
+
+            int[] intArr = { 2, 3, 4, 5 };
+            double[] doubleArr = { 2.2, 3.3, 4.4, 5.5 };
+            char[] charArr = { 'h', 'e', 'l', 'l', 'o' };
+
+            PrintArray<int>(intArr);
+            PrintArray<double>(doubleArr);
+            PrintArray<char>(charArr);
+        }
+
+        static void PrintArray<T>(T[] arr)
+        {
+            foreach (T i in arr)
+                Console.Write(i + " ");
+            Console.WriteLine();
         }
 
         // standard method
