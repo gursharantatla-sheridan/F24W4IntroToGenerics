@@ -23,6 +23,15 @@
             }
             else
                 Console.WriteLine("Invalid Key. Please try again.");
+
+
+            foreach (var kvp in dictEmps)
+            {
+                key = kvp.Key;
+                Employee emp = kvp.Value;
+
+                Console.WriteLine(key + " - " + emp);
+            }
         }
     }
 }
